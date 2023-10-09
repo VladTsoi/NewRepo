@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Calculator.Models.PaymentModel>
+
+@{
+    ViewData["Title"] = "Таблица результатов вычислений";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Name => Name.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Name => Name.PaymentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Name => Name.PaymentBodySize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Name => Name.PaymentPercentSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Name => Name.PrincipalBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(Name => Name.OwedBalance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentBodySize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaymentPercentSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrincipalBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwedBalance)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>Сумма всех переплат: @Model.Sum(p => p.PaymentPercentSize)
+</p>
+
