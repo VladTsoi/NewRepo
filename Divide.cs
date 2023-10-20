@@ -22,7 +22,7 @@ namespace ArrayReplace
             S = new object [M.Length];
             for (int i = 0; i < M.Count(); i++)
             {
-                if (M[i] % fizz == 0)
+                if (M[i] % fizz == 0) 
                 {
                     S[i] = s1;
                     if (M[i] % buzz == 0)

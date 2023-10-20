@@ -10,7 +10,7 @@ namespace ArrayReplaceTest
     {
         int[] M;
         object[] expected;
-        object[] actual;
+        object[] actual; 
         [TestMethod]
         public void Divide3_5()
         {

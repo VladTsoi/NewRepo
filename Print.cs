@@ -8,7 +8,7 @@ namespace ArrayReplace
         /// Вывести на печать полученный массив
         /// </summary>
         /// <param name="s"></param>
-        internal static void Massive(object s) 
+        internal static void Massive(object s)
         {
             Console.Write(s.ToString() + ' ');
         }
