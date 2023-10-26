@@ -7,23 +7,33 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th>               
                 @Html.DisplayNameFor(Name => Name.Id)
             </th>
             <th>
-                @Html.DisplayNameFor(Name => Name.PaymentDate)
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.PaymentDateSort">
+                    @Html.DisplayNameFor(Name => Name.PaymentDate)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(Name => Name.PaymentBodySize)
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.PaymentBodySizeSort">
+                    @Html.DisplayNameFor(Name => Name.PaymentBodySize)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(Name => Name.PaymentPercentSize)
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.PaymentPercentSizeSort">
+                    @Html.DisplayNameFor(Name => Name.PaymentPercentSize)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(Name => Name.PrincipalBalance)
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.PrincipalBalanceSort">
+                    @Html.DisplayNameFor(Name => Name.PrincipalBalance)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(Name => Name.OwedBalance)
+                <a asp-action="Index" asp-route-sortOrder="@ViewBag.OwedBalanceSort">
+                    @Html.DisplayNameFor(Name => Name.OwedBalance)
+                </a>
             </th>
             <th></th>
         </tr>

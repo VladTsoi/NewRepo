@@ -4,13 +4,16 @@ using Microsoft.AspNetCore.Mvc;
 namespace Calculator.Controllers
 {
     public class HomeController : Controller
-    {
+    {      
         ApplicationContext db;
         public HomeController(ApplicationContext context)
         {
             db = context;
         }
         public IActionResult Index() => View();
+        /// <summary> Калькулятор</summary>
+        /// <param name="paymentCredit">Класс с переменными калькулятора</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Index(PaymentCreditModel paymentCredit)
         {
